@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.chatApp.controller.LoginFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane opacity="0.7" prefHeight="542.0" prefWidth="612.0" style="-fx-background-color: #b3ffe3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApp.controller.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b3ffe3" height="529.0" layoutX="8.0" layoutY="7.0" stroke="#006b5f" strokeType="INSIDE" strokeWidth="4.0" width="598.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b3ffe3" height="376.0" layoutX="119.0" layoutY="83.0" stroke="#9cbf93" strokeType="INSIDE" strokeWidth="3.0" width="374.0" />
+      <Label layoutX="215.0" layoutY="135.0" text="Letś chat!" textFill="#2e8a99">
+         <font>
+            <Font name="Bodoni MT Black" size="38.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="128.0" fitWidth="139.0" layoutX="228.0" layoutY="194.0">
+         <image>
+            <Image url="@assests/icons8-people-skin-type-7-96.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtMessage" focusTraversable="false" layoutX="199.0" layoutY="389.0" promptText="User Name" style="-fx-background-radius: 8;">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="18.0" />
+         </font>
+      </TextField>
+   </children>
 </AnchorPane>
