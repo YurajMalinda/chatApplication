@@ -2,30 +2,40 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="542.0" prefWidth="612.0" style="-fx-background-color: #b3ffe3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApp.controller.LoginFormController">
+<AnchorPane prefHeight="542.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApp.controller.LoginFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9bcdd2" height="542.0" stroke="BLACK" strokeType="INSIDE" width="612.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b3ffe3" height="529.0" layoutX="8.0" layoutY="7.0" stroke="#006b5f" strokeType="INSIDE" strokeWidth="4.0" width="598.0" />
-      <Label layoutX="215.0" layoutY="135.0" text="Letś chat!" textFill="#2e8a99">
+      <ImageView fitHeight="542.0" fitWidth="614.0" layoutX="-1.0" opacity="0.53">
+         <image>
+            <Image>
+               <url>@assests/Login%20Background%20image.jpg</url>
+            </Image>
+         </image>
+      </ImageView>
+      <Label layoutX="215.0" layoutY="135.0" text="Letś chat!" textFill="#138394">
          <font>
             <Font name="Bodoni MT Black" size="38.0" />
          </font>
       </Label>
-      <ImageView fitHeight="128.0" fitWidth="139.0" layoutX="237.0" layoutY="193.0">
-         <image>
-            <Image url="@assests/icons8-people-skin-type-7-96.png" />
-         </image>
-      </ImageView>
       <TextField fx:id="txtMessage" focusTraversable="false" layoutX="201.0" layoutY="389.0" promptText="User Name" style="-fx-background-radius: 8;">
          <font>
             <Font name="Times New Roman Bold Italic" size="18.0" />
          </font>
       </TextField>
+      <ImageView layoutX="261.0" layoutY="223.0">
+         <image>
+            <Image>
+               <url>@assests/Users%20icon.png</url>
+            </Image>
+         </image>
+      </ImageView>
    </children>
+   <effect>
+      <InnerShadow choke="0.54" height="36.55" radius="17.775" width="36.55" />
+   </effect>
 </AnchorPane>
