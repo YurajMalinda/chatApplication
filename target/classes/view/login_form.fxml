@@ -20,7 +20,7 @@
             <Font name="Bodoni MT Black" size="38.0" />
          </font>
       </Label>
-      <TextField fx:id="txtMessage" focusTraversable="false" layoutX="201.0" layoutY="389.0" promptText="User Name" style="-fx-background-radius: 8;">
+      <TextField fx:id="txtName" focusTraversable="false" layoutX="201.0" layoutY="389.0" onAction="#txtNameOnAction" promptText="User Name" style="-fx-background-radius: 8;">
          <font>
             <Font name="Times New Roman Bold Italic" size="18.0" />
          </font>

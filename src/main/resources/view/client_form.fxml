@@ -31,7 +31,7 @@
       </Label>
       <ScrollPane fx:id="txtChat" layoutX="31.0" layoutY="99.0" prefHeight="454.0" prefWidth="396.0">
          <content>
-            <VBox fx:id="v_box" prefHeight="454.0" prefWidth="396.0" />
+            <VBox fx:id="vBox" prefHeight="454.0" prefWidth="396.0" />
          </content>
       </ScrollPane>
       <TextField fx:id="txtMessage" layoutX="83.0" layoutY="565.0" onAction="#txtMessageOnAction" onMouseClicked="#mouseOnClickHideEmoji" prefHeight="31.0" prefWidth="254.0" />
@@ -45,7 +45,7 @@
             <Image url="@assests/Emoji/camera.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="emoji_pane" layoutX="19.0" layoutY="315.0" opacity="0.64" prefHeight="229.0" prefWidth="188.0" style="-fx-background-color: #092886; -fx-background-radius: 15;">
+      <AnchorPane fx:id="emojiPane" layoutX="19.0" layoutY="315.0" opacity="0.64" prefHeight="229.0" prefWidth="188.0" style="-fx-background-color: #092886; -fx-background-radius: 15;">
          <children>
             <GridPane layoutX="10.0" layoutY="13.0" onMouseClicked="#emojiPaneOnAction" prefHeight="200.0" prefWidth="149.0">
                <columnConstraints>
