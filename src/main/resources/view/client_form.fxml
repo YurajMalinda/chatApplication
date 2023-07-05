@@ -1,11 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="619.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApp.controller.ClientFormController">
+<AnchorPane fx:id="client" prefHeight="619.0" prefWidth="453.0" style="-fx-background-color: #d9faff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApp.controller.ClientFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="90.0" stroke="BLACK" strokeType="INSIDE" width="394.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00e1ff" height="72.0" layoutX="2.0" layoutY="-1.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="453.0" />
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="17.0" layoutY="5.0">
+         <image>
+            <Image url="@assests/Emoji/user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblName" layoutX="89.0" layoutY="21.0" prefHeight="29.0" prefWidth="224.0" text="Yuraj Malinda">
+         <font>
+            <Font name="Times New Roman Bold" size="26.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="txtChat" layoutX="31.0" layoutY="99.0" prefHeight="454.0" prefWidth="396.0">
+         <content>
+            <VBox fx:id="v_box" prefHeight="454.0" prefWidth="396.0" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="txtMessage" layoutX="83.0" layoutY="565.0" onAction="#txtMessageOnAction" onMouseClicked="#mouseOnClickHideEmoji" prefHeight="31.0" prefWidth="254.0" />
+      <ImageView fitHeight="29.0" fitWidth="28.0" layoutX="399.0" layoutY="566.0" onMouseClicked="#btnSendOnAction">
+         <image>
+            <Image url="@assests/Emoji/send.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="350.0" layoutY="565.0" onMouseClicked="#btnCameraOnAction">
+         <image>
+            <Image url="@assests/Emoji/camera.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="emoji_pane" layoutX="19.0" layoutY="315.0" opacity="0.64" prefHeight="229.0" prefWidth="188.0" style="-fx-background-color: #092886; -fx-background-radius: 15;">
+         <children>
+            <GridPane layoutX="10.0" layoutY="13.0" onMouseClicked="#emojiPaneOnAction" prefHeight="200.0" prefWidth="149.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#sad" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/baww.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#lot_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/sad_eye_close.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseDragged="#money" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/money.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#love" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/love.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#green_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/blaaaak.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_one_eyy" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_eye_close.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_yes" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/sad_one.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_head" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/sad_head.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#real_amile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_real.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tuin" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/tuinnn.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#woow" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/woow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_normal" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_two.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#large_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_one.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#small_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tong_smile" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
+                     <image>
+                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/tong_face.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="55.0" fitWidth="41.0" layoutX="27.0" layoutY="556.0" onMouseClicked="#btnEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/face.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
    </children>
+   <effect>
+      <InnerShadow choke="0.56" height="17.89" radius="8.445" width="17.89" />
+   </effect>
 </AnchorPane>
