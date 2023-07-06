@@ -6,6 +6,7 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.ImageCursor;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
@@ -18,6 +19,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.awt.*;
 import java.io.*;
@@ -149,64 +151,121 @@ public class ClientFormController extends Thread {
     }
 
     public void mouseOnClickHideEmoji(MouseEvent mouseEvent) {
+        emojiPane.setVisible(false);
     }
 
     public void btnEmojiOnAction(MouseEvent mouseEvent) {
+        emojiPane.setVisible(true);
     }
 
     public void btnSendOnAction(MouseEvent mouseEvent) {
+        String message = txtMessage.getText();
+        printWriter.println(lblName.getText()+": "+message);
+        txtMessage.clear();
+
+        if(message.equalsIgnoreCase("bye")||(message.equalsIgnoreCase("Bye")||(message.equalsIgnoreCase("logout")))){
+            System.exit(0);
+        }
     }
 
     public void btnCameraOnAction(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Image");
+        this.file = fileChooser.showOpenDialog(stage);
+        printWriter.println(lblName.getText()+" "+"img"+file.getPath());
     }
 
     public void emojiPaneOnAction(MouseEvent mouseEvent) {
     }
 
     public void sad(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void lot_sad(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void money(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void love(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void green_sad(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void smile_one_eyy(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void cry_yes(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void cry_head(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void real_amile(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void tuin(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void woow(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void smile_normal(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void large_smile(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void small_smile(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
 
     public void tong_smile(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        txtMessage.setText(emoji);
+        emojiPane.setVisible(false);
     }
-
-
 }
