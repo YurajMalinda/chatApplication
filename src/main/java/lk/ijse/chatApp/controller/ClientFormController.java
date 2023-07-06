@@ -186,31 +186,31 @@ public class ClientFormController extends Thread {
     }
 
     public void lot_sad(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128554));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void money(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(129297));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void love(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128525));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void green_sad(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128560));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void smile_one_eyy(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128540));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
@@ -222,49 +222,49 @@ public class ClientFormController extends Thread {
     }
 
     public void cry_head(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128550));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void real_amile(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128514));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void tuin(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128519));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void woow(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128559));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void smile_normal(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128513));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void large_smile(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128522));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void small_smile(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128578));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
 
     public void tong_smile(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128546));
+        String emoji = new String(Character.toChars(128539));
         txtMessage.setText(emoji);
         emojiPane.setVisible(false);
     }
