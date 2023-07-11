@@ -32,6 +32,7 @@ public class ClientFormController extends Thread {
     public TextField txtMessage;
     public AnchorPane emojiPane;
     public VBox vBox;
+    public ImageView btnEmoji;
 
     BufferedReader bufferedReader;
     PrintWriter printWriter;
@@ -43,7 +44,7 @@ public class ClientFormController extends Thread {
         String userName = LoginFormController.userName;
         lblName.setText(userName);
         try {
-            socket = new Socket("localhost",4000);
+            socket = new Socket("localhost",4100);
             System.out.println("Socket is connected with server.");
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             printWriter = new PrintWriter(socket.getOutputStream(),true);
@@ -52,6 +53,7 @@ public class ClientFormController extends Thread {
             e.printStackTrace();
         }
         emojiPane.setVisible(false);
+
     }
 
     @Override
@@ -64,13 +66,13 @@ public class ClientFormController extends Thread {
 
                 StringBuilder fullMessage = new StringBuilder();
                 for (int i = 1; i < tokens.length; i++) {
-                    fullMessage.append(tokens[i] + " ");
+                    fullMessage.append(tokens[i]+ " ");
                 }
 
                 String[] messageToAr = message.split(" ");
                 String st = "";
-                for (int i = 0; i < messageToAr.length - 1; i++) {
-                    st += messageToAr[i + 1] + " ";
+                for (int i = 0; i < messageToAr.length-1; i++) {
+                    st += messageToAr[i+1]+" ";
                 }
 
                 Text text = new Text(st);
@@ -80,7 +82,7 @@ public class ClientFormController extends Thread {
                 }
 
                 if (firstChars.equalsIgnoreCase("img")) {
-                    st = st.substring(3, st.length() - 1);
+                    st = st.substring(3, st.length()-1);
                     File file = new File(st);
                     Image image = new Image(file.toURI().toString());
                     ImageView imageView = new ImageView(image);
@@ -94,7 +96,7 @@ public class ClientFormController extends Thread {
                         vBox.setAlignment(Pos.TOP_LEFT);
                         hBox.setAlignment(Pos.CENTER_LEFT);
 
-                        Text text1 = new Text(" " + cmd + " :");
+                        Text text1 = new Text(" "+cmd+" :");
                         hBox.getChildren().add(text1);
                         hBox.getChildren().add(imageView);
                     } else {
@@ -106,8 +108,8 @@ public class ClientFormController extends Thread {
                     Platform.runLater(() -> vBox.getChildren().addAll(hBox));
                 } else {
                     TextFlow textFlow = new TextFlow();
-                    if (!cmd.equalsIgnoreCase(lblName.getText() + " :")) {
-                        Text txtName = new Text(cmd + " ");
+                    if (!cmd.equalsIgnoreCase(lblName.getText()+" :")) {
+                        Text txtName = new Text(cmd+" ");
                         txtName.getStyleClass().add("txtName");
                         textFlow.getChildren().add(txtName);
 
@@ -120,13 +122,14 @@ public class ClientFormController extends Thread {
 
                     TextFlow textFlow1 = new TextFlow(textFlow);
                     HBox hBox = new HBox(12);
-                    if (!cmd.equalsIgnoreCase(lblName.getText() + " :")) {
+                    if (!cmd.equalsIgnoreCase(lblName.getText()+" :")) {
                         vBox.setAlignment(Pos.TOP_LEFT);
                         hBox.setAlignment(Pos.CENTER_LEFT);
                         hBox.getChildren().add(textFlow1);
                     } else {
-                        Text text2 = new Text(fullMessage + " ");
+                        Text text2 = new Text(fullMessage+" ");
                         TextFlow textFlow2 = new TextFlow(text2);
+                        hBox.setAlignment(Pos.BOTTOM_RIGHT);
                         hBox.getChildren().add(textFlow2);
                         hBox.setPadding(new Insets(2, 5, 2, 10));
                         textFlow2.setStyle("-fx-color: rgb(239, 242, 255);" + "-fx-background-color: rgb(191, 241, 9);" + "-fx-background-radius: 10px");

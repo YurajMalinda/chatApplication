@@ -9,7 +9,7 @@ public class Server {
     private static ArrayList<Handler> clients = new ArrayList<Handler>();
 
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(4000);
+        ServerSocket serverSocket = new ServerSocket(4100);
         Socket accept;
 
         while (true){

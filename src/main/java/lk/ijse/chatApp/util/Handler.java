@@ -18,7 +18,7 @@ public class Handler extends Thread{
             this.socket = socket;
             this.clients = clients;
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            this.printWriter = new PrintWriter(new PrintWriter(socket.getOutputStream(),true));
+            this.printWriter = new PrintWriter(socket.getOutputStream(),true);
         } catch (IOException e) {
             e.printStackTrace();
         }

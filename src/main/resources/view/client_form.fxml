@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -23,6 +24,9 @@
          <image>
             <Image url="@assests/Emoji/user.png" />
          </image>
+         <effect>
+            <InnerShadow />
+         </effect>
       </ImageView>
       <Label fx:id="lblName" layoutX="89.0" layoutY="21.0" prefHeight="29.0" prefWidth="224.0" text="Yuraj Malinda">
          <font>
@@ -34,16 +38,29 @@
             <VBox fx:id="vBox" prefHeight="454.0" prefWidth="396.0" />
          </content>
       </ScrollPane>
-      <TextField fx:id="txtMessage" layoutX="83.0" layoutY="565.0" onAction="#txtMessageOnAction" onMouseClicked="#mouseOnClickHideEmoji" prefHeight="31.0" prefWidth="254.0" />
+      <TextField fx:id="txtMessage" layoutX="83.0" layoutY="565.0" onAction="#txtMessageOnAction" onMouseClicked="#mouseOnClickHideEmoji" prefHeight="31.0" prefWidth="254.0">
+         <effect>
+            <DropShadow color="#97aaff" />
+         </effect></TextField>
       <ImageView fitHeight="29.0" fitWidth="28.0" layoutX="399.0" layoutY="566.0" onMouseClicked="#btnSendOnAction">
          <image>
             <Image url="@assests/Emoji/send.png" />
          </image>
+         <effect>
+            <DropShadow color="#97aaff" />
+         </effect>
       </ImageView>
       <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="350.0" layoutY="565.0" onMouseClicked="#btnCameraOnAction">
          <image>
             <Image url="@assests/Emoji/camera.png" />
          </image>
+         <effect>
+            <DropShadow color="#97aaff">
+               <input>
+                  <DropShadow />
+               </input>
+            </DropShadow>
+         </effect>
       </ImageView>
       <AnchorPane fx:id="emojiPane" layoutX="19.0" layoutY="315.0" opacity="0.64" prefHeight="229.0" prefWidth="188.0" style="-fx-background-color: #092886; -fx-background-radius: 15;">
          <children>
@@ -69,32 +86,32 @@
                <children>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#sad" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/baww.png" />
+                        <Image url="@assests/Emoji/baww.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#lot_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/sad_eye_close.png" />
+                        <Image url="@assests/Emoji/sad_eye_close.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseDragged="#money" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/money.png" />
+                        <Image url="@assests/Emoji/money.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#love" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/love.png" />
+                        <Image url="@assests/Emoji/love.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#green_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/blaaaak.png" />
+                        <Image url="@assests/Emoji/blaaaak.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_one_eyy" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_eye_close.png" />
+                        <Image url="@assests/Emoji/smile_eye_close.png" />
                      </image>
                      <GridPane.margin>
                         <Insets />
@@ -102,60 +119,63 @@
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_yes" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/sad_one.png" />
+                        <Image url="@assests/Emoji/sad_one.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_head" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/sad_head.png" />
+                        <Image url="@assests/Emoji/sad_head.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#real_amile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_real.png" />
+                        <Image url="@assests/Emoji/smile_real.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tuin" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/tuinnn.png" />
+                        <Image url="@assests/Emoji/tuinnn.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#woow" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/woow.png" />
+                        <Image url="@assests/Emoji/woow.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_normal" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_two.png" />
+                        <Image url="@assests/Emoji/smile_two.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#large_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_one.png" />
+                        <Image url="@assests/Emoji/smile_one.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#small_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/smile_normal.png" />
+                        <Image url="@assests/Emoji/smile_normal.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tong_smile" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
                      <image>
-                        <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/tong_face.png" />
+                        <Image url="@assests/Emoji/tong_face.png" />
                      </image>
                   </ImageView>
                </children>
             </GridPane>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="55.0" fitWidth="41.0" layoutX="27.0" layoutY="556.0" onMouseClicked="#btnEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="btnEmoji" fitHeight="55.0" fitWidth="41.0" layoutX="27.0" layoutY="559.0" onMouseClicked="#btnEmojiOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Chat_Application/Chat_Application/src/assest/face.png" />
+            <Image url="@assests/Emoji/face.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <effect>
+            <DropShadow color="#97aaff" />
+         </effect>
       </ImageView>
    </children>
    <effect>
