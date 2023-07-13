@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -23,6 +24,9 @@
          <image>
             <Image url="@assests/Emoji/user.png" />
          </image>
+         <effect>
+            <InnerShadow />
+         </effect>
       </ImageView>
       <Label fx:id="lblName" layoutX="89.0" layoutY="21.0" prefHeight="29.0" prefWidth="224.0" text="Yuraj Malinda">
          <font>
@@ -34,16 +38,29 @@
             <VBox fx:id="vBox" prefHeight="454.0" prefWidth="396.0" />
          </content>
       </ScrollPane>
-      <TextField fx:id="txtMessage" layoutX="83.0" layoutY="565.0" onAction="#txtMessageOnAction" onMouseClicked="#mouseOnClickHideEmoji" prefHeight="31.0" prefWidth="254.0" />
+      <TextField fx:id="txtMessage" layoutX="83.0" layoutY="565.0" onAction="#txtMessageOnAction" onMouseClicked="#mouseOnClickHideEmoji" prefHeight="31.0" prefWidth="254.0">
+         <effect>
+            <DropShadow color="#97aaff" />
+         </effect></TextField>
       <ImageView fitHeight="29.0" fitWidth="28.0" layoutX="399.0" layoutY="566.0" onMouseClicked="#btnSendOnAction">
          <image>
             <Image url="@assests/Emoji/send.png" />
          </image>
+         <effect>
+            <DropShadow color="#97aaff" />
+         </effect>
       </ImageView>
       <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="350.0" layoutY="565.0" onMouseClicked="#btnCameraOnAction">
          <image>
             <Image url="@assests/Emoji/camera.png" />
          </image>
+         <effect>
+            <DropShadow color="#97aaff">
+               <input>
+                  <DropShadow />
+               </input>
+            </DropShadow>
+         </effect>
       </ImageView>
       <AnchorPane fx:id="emojiPane" layoutX="19.0" layoutY="315.0" opacity="0.64" prefHeight="229.0" prefWidth="188.0" style="-fx-background-color: #092886; -fx-background-radius: 15;">
          <children>
@@ -156,6 +173,9 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <effect>
+            <DropShadow color="#97aaff" />
+         </effect>
       </ImageView>
    </children>
    <effect>

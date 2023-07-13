@@ -108,12 +108,12 @@ public class ClientFormController extends Thread {
                     Platform.runLater(() -> vBox.getChildren().addAll(hBox));
                 } else {
                     TextFlow textFlow = new TextFlow();
-                    if (!cmd.equalsIgnoreCase(lblName.getText()+" :")) {
+                    if (!cmd.equalsIgnoreCase(lblName.getText()+":")) {
                         Text txtName = new Text(cmd+" ");
                         txtName.getStyleClass().add("txtName");
                         textFlow.getChildren().add(txtName);
 
-                        textFlow.setStyle("-fx-color: rgb(239, 242, 255);" + "-fx-background-color: rgb(255, 40, 28);" + "-fx-background-radius: 10px");
+                        textFlow.setStyle("-fx-color: rgb(239, 242, 255);" + "-fx-background-color: rgb(228, 255, 94);" + "-fx-background-radius: 0px 10px 10px 10px");
                         textFlow.setPadding(new Insets(3, 10, 3, 10));
                     }
                     textFlow.getChildren().add(text);
@@ -122,7 +122,7 @@ public class ClientFormController extends Thread {
 
                     TextFlow textFlow1 = new TextFlow(textFlow);
                     HBox hBox = new HBox(12);
-                    if (!cmd.equalsIgnoreCase(lblName.getText()+" :")) {
+                    if (!cmd.equalsIgnoreCase(lblName.getText()+":")) {
                         vBox.setAlignment(Pos.TOP_LEFT);
                         hBox.setAlignment(Pos.CENTER_LEFT);
                         hBox.getChildren().add(textFlow1);
@@ -132,7 +132,7 @@ public class ClientFormController extends Thread {
                         hBox.setAlignment(Pos.BOTTOM_RIGHT);
                         hBox.getChildren().add(textFlow2);
                         hBox.setPadding(new Insets(2, 5, 2, 10));
-                        textFlow2.setStyle("-fx-color: rgb(239, 242, 255);" + "-fx-background-color: rgb(191, 241, 9);" + "-fx-background-radius: 10px");
+                        textFlow2.setStyle("-fx-color: rgb(239, 242, 255);" + "-fx-background-color: rgb(191, 241, 9);" + "-fx-background-radius: 10px 10px 10px 0px");
                         textFlow2.setPadding(new Insets(3, 10, 3, 10));
                     }
                     Platform.runLater(() -> vBox.getChildren().addAll(hBox));
